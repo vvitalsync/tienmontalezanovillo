@@ -1,0 +1,85 @@
+/* 🎮 Estilo general de la sección */
+.item-product {
+    background: linear-gradient(135deg, #111, #222); /* Fondo oscuro con degradado */
+    color: #fff; /* Texto en blanco */
+    border: 2px solid transparent;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.5s ease;
+    position: relative; /* Para elementos secundarios absolutos */
+    overflow: hidden;
+  }
+  
+  /* ✨ Efecto RGB de borde animado */
+  .item-product::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, 
+      red, orange, yellow, green, cyan, blue, violet, red);
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    animation: rgbBorder 5s infinite;
+  }
+  
+  /* 🎨 Animación de borde RGB */
+  @keyframes rgbBorder {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+  }
+  
+  /* 🎮 Efecto hover interactivo */
+  .item-product:hover {
+    transform: translateY(-5px); /* Levanta ligeramente el elemento */
+    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.6); /* Brilla al hacer hover */
+    border-color: cyan; /* Cambia el borde */
+  }
+  
+  /* ✏️ Información del producto */
+  .product-info {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista (puedes agregarla en HTML) */
+  }
+  
+  /* 🏷️ Estilo del código de barras */
+  .product-barcode {
+    font-size: 1.1rem;
+    color: #0ff; /* Cyan */
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; /* Efecto neón */
+  }
+  
+  /* 📋 Nombre del producto */
+  .product-name {
+    font-size: 1.3rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 10px 0;
+    text-shadow: 0 0 3px #fff, 0 0 8px #00f; /* Azul neón */
+  }
+  
+  /* 💲 Precio del producto */
+  .product-price {
+    font-size: 1.1rem;
+    color: lime; /* Verde brillante */
+    text-shadow: 0 0 5px lime, 0 0 10px lime; /* Efecto neón */
+  }
+  
+  /* 🔮 Descripción del producto */
+  .description {
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  

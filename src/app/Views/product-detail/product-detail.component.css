@@ -1,0 +1,75 @@
+/* Fondo del contenedor */
+.product-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e293b 30%, #0f172a);
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Caja del producto */
+.product-details {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Título del producto */
+.product-title {
+  font-size: 2.4rem;
+  color: #38bdf8;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #38bdf8, 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+/* Detalles del producto */
+.product-info {
+  font-size: 1.2rem;
+  color: #a1a1aa;
+  margin: 10px 0;
+}
+
+.product-info span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Botón */
+.product-button {
+  background: linear-gradient(90deg, #38bdf8, #9333ea);
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 12px #38bdf8;
+}
+
+.product-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #38bdf8, 0 0 25px #9333ea;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
