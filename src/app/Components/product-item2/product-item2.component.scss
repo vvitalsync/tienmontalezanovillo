@@ -1,0 +1,52 @@
+.item-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 170px; // Garantiza que los productos no sean demasiado pequeños
+  margin: 5px auto; // Mayor separación entre productos
+  border-radius: 10px; // Bordes más estilizados
+  overflow: hidden;
+  border: 1px solid #d1d1d1;
+  background: white;
+  transition: transform 0.25s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: var(--ion-color-primary);
+  }
+}
+
+.product-image {
+  width: 100%;
+  height: 120px; // Hace las imágenes más grandes
+  object-fit: cover;
+  border-bottom: 2px solid var(--ion-color-primary);
+}
+
+ion-card-content {
+  padding: 8px; // Ajusta el espaciado interno
+  text-align: center;
+
+  .product-name {
+    font-size: 1.2rem; // Aumenta el tamaño del nombre
+    font-weight: bold;
+    margin: 4px 0;
+    color: var(--ion-color-dark);
+  }
+
+  .product-barcode {
+    font-size: 0.8rem; // Aumenta la legibilidad del código
+    color: var(--ion-color-medium);
+    margin-bottom: 4px;
+  }
+
+  ion-chip {
+    background: var(--ion-color-success);
+    color: white;
+    font-size: 1rem; // Hace el precio más visible
+    font-weight: bold;
+    padding: 5px 8px; // Hace el chip un poco más grande
+    border-radius: 12px;
+  }
+}

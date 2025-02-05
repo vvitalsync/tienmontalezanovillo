@@ -1,0 +1,129 @@
+/* General Styling for Cart */
+ion-header {
+    --background: var(--ion-color-primary);
+    color: white;
+  
+    ion-toolbar {
+      --background: transparent;
+  
+      ion-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+  
+  ion-content {
+    padding: 10px;
+    background: var(--ion-color-light);
+  }
+  
+  /* Estilo para lista de productos */
+  ion-list {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  ion-item {
+    --inner-padding-top: 8px;
+    --inner-padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: flex-start; /* Asegura un mejor alineado vertical */
+    padding: 10px 5px;
+  
+    ion-label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 0.9rem;
+  
+      h2 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin: 0;
+        color: var(--ion-color-dark);
+      }
+  
+      p {
+        font-size: 0.85rem;
+        margin: 4px 0;
+        color: var(--ion-color-medium);
+      }
+    }
+  
+    ion-button {
+      --padding-start: 0;
+      --padding-end: 0;
+      --icon-size: 1.2rem;
+      margin-left: 5px;
+  
+      ion-icon {
+        color: var(--ion-color-danger);
+      }
+    }
+  }
+  
+  /* Total del carrito */
+  ion-item[lines="none"] {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+  
+    ion-label {
+      font-size: 1rem;
+      color: var(--ion-color-dark);
+  
+      h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+  
+    ion-label[slot="end"] {
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--ion-color-success);
+    }
+  }
+  
+  /* Botones */
+  ion-button {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+  
+    &[color="success"] {
+      background: var(--ion-color-success);
+      color: white;
+    }
+  
+    &[color="danger"] {
+      background: var(--ion-color-danger);
+      color: white;
+    }
+  
+    &[color="secondary"] {
+      background: var(--ion-color-secondary);
+      color: white;
+    }
+  }
+  
+  /* Texto para carrito vacío */
+  ion-text {
+    text-align: center;
+    margin-top: 50px;
+  
+    h2 {
+      font-size: 1.2rem;
+      color: var(--ion-color-medium);
+    }
+  }
+  

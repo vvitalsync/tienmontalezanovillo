@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carrito de Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Mostrar mensaje si el carrito está vacío -->
+  <ng-container *ngIf="cart.length > 0; else emptyCart">
+    <ion-list>
+      <ion-item *ngFor="let item of cart">
+        <ion-label>
+          <h2>{{ item.product.name }}</h2>
+          <p>Cantidad: {{ item.quantity }}</p>
+          <p>Precio Total: ${{ (item.product.price * item.quantity) | number: '1.2-2' }}</p>
+        </ion-label>
+        <ion-button fill="clear" color="danger" (click)="removeOne(item.product)">
+          <ion-icon slot="icon-only" name="remove-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <ion-item lines="none">
+      <ion-label>
+        <h2>Total del Carrito:</h2>
+      </ion-label>
+      <ion-label slot="end">
+        <h2>${{ total | number: '1.2-2' }}</h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-button expand="block" color="success" (click)="finalizePurchase()">
+      Finalizar Compra
+    </ion-button>
+    <ion-button expand="block" color="danger" (click)="cancelPurchase()">
+      Cancelar Compra
+    </ion-button>
+  </ng-container>
+
+  <ng-template #emptyCart>
+    <ion-text color="medium">
+      <h2>Tu carrito está vacío</h2>
+    </ion-text>
+  </ng-template>
+
+  <ion-button 
+  expand="block" 
+  shape="block"
+  color="secondary" 
+  class="product-button" 
+  (click)="gotoHome()">
+  Regresar
+</ion-button>
+
+</ion-content>
+
+ 
+

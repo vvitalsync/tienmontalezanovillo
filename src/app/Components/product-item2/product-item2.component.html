@@ -1,0 +1,21 @@
+<ion-card 
+  (click)="navigateToID()" 
+  class="item-product" 
+  aria-label="Detalles del producto">
+  <ion-img 
+    [src]="item.imageUrl"
+    alt="Imagen del producto" 
+    class="product-image">
+  </ion-img>
+  <ion-card-content>
+    <ion-text color="primary">
+      <h2 class="product-name">{{ item.name }}</h2>
+    </ion-text>
+    <ion-text color="dark">
+      <p class="product-barcode">Código: {{ item.barcode }}</p>
+    </ion-text>
+    <ion-chip color="success">
+      <ion-label class="product-price">Precio: ${{ item.price }}</ion-label>
+    </ion-chip>
+  </ion-card-content>
+</ion-card>

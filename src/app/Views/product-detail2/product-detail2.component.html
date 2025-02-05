@@ -1,0 +1,25 @@
+<ion-content class="product-container">
+  <ion-header class="header-title">
+    <h1>{{ productSelected.name }}</h1>
+  </ion-header>
+
+  <ion-card class="product-details">
+    <ion-img
+      [src]="productSelected.imageUrl"
+      alt="Imagen del producto"
+      class="product-image">
+    </ion-img>
+
+    <ion-card-content class="product-info">
+      <p>Código de Barras: <strong>{{ productSelected.barcode }}</strong></p>
+      <p>Precio: <strong>${{ productSelected.price}}</strong></p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="button-grid">
+    <ion-button expand="full" color="success" (click)="addToCart()">Añadir al carrito</ion-button>
+    <ion-button expand="full" color="danger" (click)="removeFromCart()">Eliminar del carrito</ion-button>
+    <ion-button expand="full" color="warning" [routerLink]="'/cart'">Ver Carrito</ion-button>
+    <ion-button expand="full" color="secondary" (click)="gotoHome()">Regresar</ion-button>
+  </div>
+</ion-content>

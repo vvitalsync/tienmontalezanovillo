@@ -1,0 +1,25 @@
+<ion-content class="list-products">
+  <ion-header class="store-header">
+    <h1>VitalSync</h1>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        size="auto"
+        *ngFor="let item of productList"
+        class="item"
+      >
+        <app-product-item2 [item]="item"></app-product-item2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+  <!-- Overlay de botones -->
+  <div class="overlay-buttons">
+    <button class="overlay-button cart-button"  [routerLink]="'/cart'">
+      🛒
+    </button>
+    <button class="overlay-button add-button" [routerLink]="'/add-product'">
+      ➕
+    </button>
+  </div>
+</ion-content>

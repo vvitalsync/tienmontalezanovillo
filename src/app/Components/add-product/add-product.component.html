@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="router.navigate(['/'])">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="newProduct.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Código de Barras</ion-label>
+      <ion-input [(ngModel)]="newProduct.barcode"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input type="number" [(ngModel)]="newProduct.price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">URL de Imagen</ion-label>
+      <ion-input [(ngModel)]="newProduct.imageUrl"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="success" (click)="addProduct()">
+    Guardar Producto
+  </ion-button>
+</ion-content>
+

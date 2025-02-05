@@ -1,0 +1,90 @@
+.list-products {
+  background: var(--ion-color-light);
+  display: flex;
+  flex-direction: column;
+  position: relative; // Asegura que los overlays se posicionen correctamente
+}
+
+.store-header {
+  text-align: center;
+  margin-bottom: 8px;
+  padding: 16px 0;
+  background: linear-gradient(135deg, var(--ion-color-primary), var(--ion-color-secondary));
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+}
+
+ion-grid {
+  width: 100%;
+  max-width: 350px; // Ajusta el ancho máximo para evitar que se descuadre
+  display: flex;
+  justify-content: center;
+}
+
+ion-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px; // MÁS espacio entre productos horizontalmente
+  flex-wrap: wrap; // Asegura que se acomoden bien en móviles
+  margin: 0 auto;
+}
+
+ion-col {
+  flex: 1 1 calc(50% - 16px); // Dos productos por fila con espacio horizontal
+  max-width: 160px; // Tamaño uniforme de los productos
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+app-product-item2 {
+  width: 100%;
+  max-width: 160px;
+}
+
+.overlay-buttons {
+  position: fixed; // Fija los botones en la pantalla
+  bottom: 20px; // Distancia desde la parte inferior
+  right: 20px; // Distancia desde la izquierda
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // Espacio entre los botones
+}
+
+.overlay-button {
+  width: 50px; // Tamaño del círculo
+  height: 50px; // Tamaño del círculo
+  border-radius: 50%; // Hace que los botones sean circulares
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; // Tamaño del emoji
+  cursor: pointer; // Cambia el cursor al pasar sobre los botones
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); // Sombra para resaltar
+  transition: transform 0.2s ease; // Efecto de escala al hacer hover
+}
+
+.overlay-button:hover {
+  transform: scale(1.1); // Escala ligeramente al pasar el mouse
+}
+
+.cart-button {
+  background-color:greevar(--ion-color-tertiary); // Color de fondo del botón de carrito
+  color: white; // Color del emoji
+}
+
+.add-button {
+  background-color: greevar(--ion-color-primary); // Color de fondo del botón de añadir
+  color: white; // Color del emoji
+}

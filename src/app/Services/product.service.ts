@@ -9,9 +9,10 @@ export class ProductService {
    * 🛒 Lista estática de productos como ejemplo.
    */
   productList: Product[] = [
-    { name: 'Laptop', barcode: '1234567890123', price: 1200.99},
-    { name: 'Smartphone', barcode: '9876543210987', price: 799.49},
-    { name: 'Auriculares Bluetooth', barcode: '4561237894560', price: 59.99},
+    { name: 'Laptop', barcode: '1234567890123', price: 1200.99, imageUrl: 'assets/product1.jpg' },
+    { name: 'Smartphone', barcode: '9876543210987', price: 799.49, imageUrl: 'assets/product2.jpg'},
+    { name: 'Iphone 19', barcode: '4561237894569', price: 200.99, imageUrl: 'assets/product4.jpg'},
+    { name: 'Auriculares', barcode: '4561237894560', price: 259.99, imageUrl: 'assets/product3.jpg'},
   ];
 
   constructor() {}
@@ -38,5 +39,14 @@ export class ProductService {
     }
     return undefined; // Retorna `undefined` si no se encuentra el producto.
   }
+  
+  addProduct(product: Product) {
+    this.productList.push(product);
+  }
+  
+  updateProductList() {
+    this.productList = [...this.productList]; // Dispara el cambio en Angular
+  }
+  
 }
 

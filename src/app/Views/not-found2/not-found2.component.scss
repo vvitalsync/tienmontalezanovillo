@@ -1,0 +1,57 @@
+// Variables de color
+$background-gradient: linear-gradient(135deg, #e0f7fa, #80deea);
+$error-box-bg: #ffffff;
+$error-icon-color: #ff3e3e;
+$error-title-color: #333;
+$error-message-color: #555;
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: $background-gradient; // Fondo degradado suave
+  padding: 16px;
+
+  .error-box {
+    text-align: center;
+    background-color: $error-box-bg; // Fondo blanco para el cuadro de error
+    padding: 32px; // Espaciado interno
+    max-width: 400px; // Ancho máximo del cuadro
+    width: 100%; // Ancho completo en móviles
+    transition: transform 0.3s; // Transición suave para el efecto hover
+
+    &:hover {
+      transform: translateY(-5px); // Efecto de elevación al pasar el mouse
+    }
+
+    .error-icon {
+      font-size: 72px; // Tamaño más grande para el icono
+      color: $error-icon-color; // Color rojo para el icono de error
+      margin-bottom: 16px; // Espaciado inferior
+      animation: bounce 1s infinite; // Animación de rebote
+    }
+
+    .error-title {
+      padding-top: 15px;
+      font-size: 26px; // Tamaño de fuente para el título
+      font-weight: bold; // Negrita para el título
+      color: $error-title-color; // Color del texto
+      margin-bottom: 8px; // Espaciado inferior
+    }
+
+    .error-message {
+      padding-top: 10px;
+      font-size: 18px; // Tamaño de fuente para el mensaje
+      color: $error-message-color; // Color gris más oscuro para el mensaje
+      margin-bottom: 24px; // Espaciado inferior
+    }
+
+    .return-button {
+      --color: white; // Color del texto del botón
+      font-size: 16px; // Tamaño de fuente del botón
+      padding: 20px; // Espaciado interno del botón
+    }
+  }
+}
+
